@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú</title>
+  <!-- Incluir Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+<body class="admin">
+  <div class="contenedor_admin">
+    <!-- Utilizar el ícono de Bootstrap como logo del muñeco -->
+    <img src="../node_modules/bootstrap-icons/icons/person-circle.svg" style="width: 50px; margin-right: 20px; cursor: pointer;top: 10px;left: 10px;position:absolute;" onclick="toggleMenu()"><br><br>
+    <!-- Fin del logo -->
+   
+    
+    <div class="dropdown" id="menuDropdown" style="display: none;">
+        <h2>Menú</h2>
+      <div >
+        <a class="dropdown-item" href="agregar.html">Agregar Horario de Riego</a>
+        <a class="dropdown-item" href="#" onclick="opcionSeleccionada('Ver Datos de Sensores')">Ver Datos de Sensores</a>
+        <a class="dropdown-item" href="#" onclick="opcionSeleccionada('Encender/Apagar Riego')">Encender/Apagar Riego</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluir Bootstrap JS y jQuery (requerido para el funcionamiento del menú desplegable) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menuDropdown");
+      menu.style.display = (menu.style.display === "none") ? "block" : "none";
+    }
+
+    function opcionSeleccionada(opcion) {
+      // Redireccionar a la página adecuada
+      if (opcion === "Agregar Horario de Riego") {
+        window.location.href = "formulario_agregar_riego.html";
+      } else {
+        // Aquí puedes agregar más redirecciones para las otras opciones
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

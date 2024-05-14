@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Horario de Riego</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+
+  <style>
+    .boton_agregar {
+      background-color:  #46A2FD; /* Cambiar al color deseado */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer; 
+      transition: background-color 0.3s ease;
+      letter-spacing: 1px;
+      margin: auto;
+      display: block;
+  }
+  
+  .boton_agregar:hover {
+      background-color:  #46A2FD; /* Cambiar al color deseado */
+  }
+  
+  </style>
+</head>
+<body class="admin">
+  <div  class="contenedor_admin">
+    <h2>Agregar Horario de Riego</h2>
+  <form action="../admin/php/agregar.php" method="POST">
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" name="fecha" required><br><br>
+    
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" name="hora" required><br><br>
+    
+    <label for="id_usuario">ID de Usuario:</label>
+    <select id="id_usuario" name="id_usuario" required> </select><br><br>
+    
+    <button type="submit" class="boton_agregar">Agregar Horario</button>
+
+  </form>
+  </div>
+  <div id="carga_h" class="contenedor_admin">
+    <!-- Aquí se mostrarán los horarios -->
+  </div>
+  
+  <script src="../assets/js/carga_usuario.js"></script>
+</body>
+</html>
